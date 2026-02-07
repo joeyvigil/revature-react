@@ -9,7 +9,7 @@ const HelloComp: React.FC = () => {
     }
 
   return (
-    <>
+    <div style={{border: '1px solid pink', padding: '10px', margin: '10px'}}>
         <div>HelloComp</div>
         <button onClick={() => setClicks(clicks + 1)}>
             Click me {clicks} times
@@ -18,7 +18,7 @@ const HelloComp: React.FC = () => {
             you can click me too!
         </button>
 
-    </>
+    </div>
   )
 }
 

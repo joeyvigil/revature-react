@@ -3,8 +3,10 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import HelloComp from './components/HelloComp'
-import TestComp from './components/TestComp'
-import ThirdComp from './components/ThirdComp'
+import Dashboard from './components/Dashboard'
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom'
+import Login from './components/Login'
+
 
 
 function App() {
@@ -16,13 +18,17 @@ function App() {
       <h1>Revature + React</h1>
       <p>We are writing in tsx </p>
 
-      {/* comment */}
       
-      <p>check out this custom component:</p>
       <HelloComp />
-      <TestComp />
-      <ThirdComp />
 
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          {/* <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} /> */}
+        </Routes>
+      </BrowserRouter>
 
 
     </>
